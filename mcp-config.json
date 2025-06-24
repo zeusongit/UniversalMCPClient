@@ -7,7 +7,7 @@
         "type": "stdio",
         "stdio": {
           "command": "node",
-          "args": ["E:\\rmWorkspace\\Projects\\MinimalMCP\\dist\\index.js"],
+          "args": ["path\\to\\MinimalDPMMCP\\dist\\index.js"],
           "env": {}
         }
       }
