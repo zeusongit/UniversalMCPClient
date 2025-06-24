@@ -1,0 +1,24 @@
+{
+  "servers": {
+    "dynamo-packages": {
+      "name": "DynamoPackages Server",
+      "description": "Server for DynamoPackages validation and listing",
+      "transport": {
+        "type": "stdio",
+        "stdio": {
+          "command": "node",
+          "args": ["E:\\rmWorkspace\\Projects\\MinimalMCP\\dist\\index.js"],
+          "env": {}
+        }
+      }
+    }
+  },
+  "anthropic": {
+    "apiKey": "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",
+    "model": "claude-3-5-sonnet-20241022"
+  },
+  "api": {
+    "port": 3000,
+    "host": "0.0.0.0"
+  }
+} 

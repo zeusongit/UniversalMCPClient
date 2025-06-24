@@ -1,0 +1,68 @@
+{
+  "servers": {
+    "dynamo-packages": {
+      "name": "DynamoPackages Server",
+      "description": "Server for DynamoPackages validation and listing",
+      "transport": {
+        "type": "stdio",
+        "stdio": {
+          "command": "node",
+          "args": ["/absolute/path/to/dynamo-packages-server.js"],
+          "env": {
+            "DYNAMO_API_KEY": "your-dynamo-api-key-here"
+          }
+        }
+      }
+    },
+    "weather-server": {
+      "name": "Weather Server",
+      "description": "Provides weather information",
+      "transport": {
+        "type": "stdio",
+        "stdio": {
+          "command": "python3",
+          "args": ["/absolute/path/to/weather-server.py"],
+          "env": {
+            "WEATHER_API_KEY": "your-weather-api-key"
+          }
+        }
+      }
+    },
+    "file-server": {
+      "name": "File Server",
+      "description": "Provides file system access",
+      "transport": {
+        "type": "sse",
+        "sse": {
+          "url": "http://localhost:8080/sse",
+          "headers": {
+            "Authorization": "Bearer your-token-here"
+          }
+        }
+      }
+    },
+    "database-server": {
+      "name": "Database Server", 
+      "description": "Provides database query capabilities",
+      "transport": {
+        "type": "stdio",
+        "stdio": {
+          "command": "java",
+          "args": ["-jar", "/absolute/path/to/database-server.jar"],
+          "env": {
+            "DB_CONNECTION_STRING": "your-db-connection",
+            "DB_PASSWORD": "your-db-password"
+          }
+        }
+      }
+    }
+  },
+  "anthropic": {
+    "apiKey": "your-anthropic-api-key-here",
+    "model": "claude-3-5-sonnet-20241022"
+  },
+  "api": {
+    "port": 3000,
+    "host": "0.0.0.0"
+  }
+} 
